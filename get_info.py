@@ -1,7 +1,7 @@
 import requests
 import json
 
-_TOKEN = '<YOUR_TOKEN>'
+_TOKEN = 'your_token'
 
 def get_user_location(username, token):
     print("get_users")
@@ -95,7 +95,7 @@ def get_repositories(token):
                         print(f"Matches mmajority criteria:  {repo['full_name']} {no_commits}")
                         repositories.append({ "name": repo["full_name"], "commits": commits, "collaborators": collaborators, "users": users})
                 else:
-                    print(f"Commit size not met with # comments = {no_commits} for {repo["full_name"]}")
+                    print(f"Commit size not met with # comments = {no_commits} for {repo['full_name']}")
             if 'next' in response.links:
                     params['page'] += 1
             else:
