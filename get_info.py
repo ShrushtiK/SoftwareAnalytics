@@ -60,7 +60,7 @@ def get_collaborators(repo_name, token, per_page, page):
             return None, None, False, None
     else:
         print(f"Error for collaborators: {response.status_code} {response.reason}")
-        return None, None, None, None, next_page_url
+        return None, None, None, next_page_url
     
 # retrieve all commits of a repository    
 def get_number_commits(repo_name, token, per_page, page):
@@ -107,7 +107,8 @@ def get_repositories(token, per_page):
     repositories = []
     while True:
         response = requests.get(search_url, headers=headers, params=params)
-        if len(repositories) > 2:
+        if len(repositories) > 100:
+            print("did this actually happen?")
             return repositories
         if response.status_code == 200:
             data=response.json()
