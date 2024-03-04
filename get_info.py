@@ -2,8 +2,7 @@ import requests
 import json
 import time
 
-_TOKEN = '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'
-#_TOKEN = 'your_token'
+_TOKEN = 'your_token'
 
 #get the users and their location
 def get_user_location(username, token):
