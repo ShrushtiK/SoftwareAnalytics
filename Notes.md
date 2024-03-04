@@ -17,7 +17,7 @@ Do projects that involve big global collaboration have a lower review speed?
 1. Timezone
 2. Derived from the organisation that some users might have on their profile (e.g. Microsoft UK)
 3. Time of commit (Emeralda's idea - sounds questionable to me - discuss it)
-4. [Country] - might not be representative, but we can have it as an option
+4. [Country & Bio fields] - might not be representative, but we can have it as an option
 - **How do we define 'big' global collaboration?**
 We can get the data and analyse their distribution and then decide (Emeralda)
 - **How do we define big 'global' collaboration?** We need to set a threshold regarding how many different time zones we consider global and non-global. Or percentage of different values? How much difference is considered significant (i.e., is 1 our difference significant?)
