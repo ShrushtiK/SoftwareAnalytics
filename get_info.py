@@ -8,21 +8,23 @@ _TOKEN = 'your_token'
 def get_user_location(username, token):
     print("get_users")
     url = f'https://api.github.com/users/{username}'
-    location = False
+    has_location = False
     headers = {
         'Authorization': f'token {token}',
         'Accept': 'application/vnd.github.v3+json'
     }
-    response = requests.get(url, headers=headers)
     
     # Check if the request was successful
-    if response.status_code == 200:
+    try:
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()  # Raise an exception for 4xx or 5xx status codes
         user_info = response.json()
-        location = True if user_info["location"] != None else False
-        return user_info, location
-    else:
-        print(f"Error fetching information for user {username}: {response.status_code} {response.reason}")
-        return None, location
+        has_location = user_info.get("location") is not None
+        return user_info, has_location
+    except requests.exceptions.RequestException as e:
+        print(f"Error fetching information for user {username}: {e}")
+        return None, False
+
 
 # retrieve all collaborators of a repository        
 def get_collaborators(repo_name, token, per_page, page):
@@ -38,9 +40,9 @@ def get_collaborators(repo_name, token, per_page, page):
         location_percentage = 0
         users = []
         for collaborator in collaborators:
-            user_info, location = get_user_location(collaborator["login"], token)
+            user_info, has_location = get_user_location(collaborator["login"], token)
             users.append(user_info)
-            if location is True:
+            if has_location is True:
                 location_percentage = location_percentage + 1
         final_location_percentage = location_percentage / len(collaborators)
         print(f"*************Location percentage***********, {final_location_percentage}")
