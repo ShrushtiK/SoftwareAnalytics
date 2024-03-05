@@ -6,10 +6,16 @@ Do projects that involve big global collaboration have a lower review speed?
 # Data extraction:
 ## Repositories criteria:
 - **DL projects (include tensorflow or pytorch or keras)**
-  Emeralda confirmed that these libraries are okay.
-  Recommends to find a reason behind this choice.
-- **Have 1000 to 100,000 commits.** Range is fine. Again, recommends explaining why we chose this range.
-- **Are non-industry**: Open source. Confirmed.
+  We have choosen projects that include at least one of the libraries in their descriptions, README file, or codebase.
+  The reason behind the 3 libraries is that they are the most popular libraries used in deep learning.
+  ***Emeralda confirmed that these libraries are okay.
+  Recommends to find a reason behind this choice.***
+- **Have 1000 to 100,000 commits.**
+  We are filtering repositories based on their commit count falling withing this range. We are looking for active communities with many contributions. We want to avoid small projects or excessibely large projects that will take a lot of time to analyze.
+  ***Range is fine. Again, recommends explaining why we chose this range.***
+- **Are non-industry**:
+We are prioritizing open-source projects that have been developed by the community, because this will rise the availability and diversity of projects, transparency and knowledge-sharing.
+***Open source. Confirmed.***
 - **At least 50% of the authors have sth that reveals their timezone** (see 3-4 different ways below). Why 50%? We need to find the difference between contributors and collaborators!!
 <sub> WitHub identifies contributors by author email address. This endpoint groups contribution counts by GitHub user, which includes all associated email addresses. To improve performance, **only the first 500 author email addresses in the repository link to GitHub users**. The rest will appear as anonymous contributors without associated GitHub user information.</sub>
 
