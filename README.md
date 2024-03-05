@@ -8,7 +8,7 @@ Authors: Andra Trandafir, Elena Georgiou, Eduard Sabo, Shrushti .
 ***Do projects that involve big global collaboration have a lower review speed?***
 
 ## Intuition
-The hypothesis we have come up with suggests that project that involve international collaboration may be subjected to slower review speeds due to various communication issues: language barriers, different timezones, etc.
+The hypothesis we have come up with suggests that project that involve international collaboration may be subjected to slower review speeds due to various communication issues: language barriers, different timezones, cultural differences, technology and infrastructure differences, communication channels and tools, work-life balance and burnout regulations etc. 
 
 ## Data Extraction
 Repositories Criteria: 
