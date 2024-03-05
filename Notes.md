@@ -10,7 +10,7 @@ Do projects that involve big global collaboration have a lower review speed?
   Recommends to find a reason behind this choice.
 - **Have 1000 to 100,000 commits.** Range is fine. Again, recommends explaining why we chose this range.
 - **Are non-industry**: Open source. Confirmed.
-- **At least 50% of the authors have sth that tells their timezone** (see 3-4 different ways below). Why 50%?
+- **At least 50% of the authors have sth that reveals their timezone** (see 3-4 different ways below). Why 50%?
 
 ## Metrics & Thresholds:
 - **Timezone:** Three ways to do this:
