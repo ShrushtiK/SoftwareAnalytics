@@ -7,21 +7,17 @@ _TOKEN = 'your_token'
 def get_user_location(username, token):
     print("get_users")
     url = f'https://api.github.com/users/{username}'
-    location = False
     headers = {
         'Authorization': f'token {token}',
         'Accept': 'application/vnd.github.v3+json'
     }
     response = requests.get(url, headers=headers)
 
-    # Check if the request was successful
-    if response.status_code == 200:
-        user_info = response.json()
-        location = True if user_info["location"] != None else False
-        return user_info, location
+    if response.status_code == 200:        user_info = response.json()
+        return user_info.get("location") is not None
     else:
         print(f"Error fetching information for user {username}: {response.status_code} {response.reason}")
-        return None, location
+        return False
 
 def get_collaborators(repo_name, token, per_page, page):
     print("get_collabs")
@@ -36,16 +32,15 @@ def get_collaborators(repo_name, token, per_page, page):
         location_percentage = 0
         users = []
         for collaborator in collaborators:
-            user_info, location = get_user_location(collaborator["login"], token)
+            user_info = get_user_location(collaborator["login"], token)
             users.append(user_info)
-            if location is True:
-                location_percentage = location_percentage + 1
+            if user_info:
+                location_percentage += 1
         final_location_percentage = location_percentage / len(collaborators)
         print(f"*************Location percentage***********, {final_location_percentage}")
         
-        # Check if there is a next page
-        next_page_url = None
         link_header = response.headers.get('Link')
+        next_page_url = None
         if link_header:
             links = link_header.split(', ')
             for link in links:
@@ -56,9 +51,7 @@ def get_collaborators(repo_name, token, per_page, page):
         return collaborators, users, final_location_percentage, next_page_url
     else:
         print(f"Error for collaborators: {response.status_code} {response.reason}")
-        return None, None, None, None, next_page_url
-        
-
+        return None, None, None, None
 
 def get_number_commits(repo_name, token, per_page, page):
     print("get_commits")
