@@ -4,8 +4,8 @@ Do projects that involve big global collaboration have a lower review speed?
 **Intuition behind it:** Due to lack of communication (due to language barriers) and differences in timezones, the review speed might be slower
 
 # Data extraction:
-## Repositories criteria:
-- **DL projects (include tensorflow or pytorch or keras)**
+## Repositories criteria: <sub> https://docs.github.com/en/rest/search/search?apiVersion=2022-11-28</sub>
+- **DL projects (include tensorflow AND pytorch AND keras)**
   We have choosen projects that include at least one of the libraries in their descriptions, README file, or codebase.
   The reason behind the 3 libraries is that they are the most popular libraries used in deep learning.
   ***Emeralda confirmed that these libraries are okay.
@@ -29,3 +29,9 @@ We are prioritizing open-source projects that have been developed by the communi
 We can get the data and analyse their distribution and then decide (Emeralda)
 - **How do we define big 'global' collaboration?** We need to set a threshold regarding how many different time zones we consider global and non-global. Or percentage of different values? How much difference is considered significant (i.e., is 1 our difference significant?)
 - **How do we define review speed?** Is it time-to-merge? Is it time-to-accept?![image](https://github.com/ShrushtiK/SoftwareAnalytics/assets/67713265/3ddc89bc-3ade-4ef3-b41e-202ed91af2c2)
+
+## Other ideas:
+- filter by language (language_url field in API)
+- use topics (repositories have tags, which we can use e.g. to identify open-source)
+- stars (popular repositories)
+
