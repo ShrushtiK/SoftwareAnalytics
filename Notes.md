@@ -35,3 +35,5 @@ We can get the data and analyse their distribution and then decide (Emeralda)
 - use topics (repositories have tags, which we can use e.g. to identify open-source)
 - stars (popular repositories)
 
+## Other points:
+- Some people work remotely, so the organisation field might not be representative. But we believe that they will be working for the hours of the organisation
