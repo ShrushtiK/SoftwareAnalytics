@@ -13,7 +13,8 @@ def get_user_location(username, token):
     }
     response = requests.get(url, headers=headers)
 
-    if response.status_code == 200:        user_info = response.json()
+    if response.status_code == 200:        
+        user_info = response.json()
         return user_info.get("location") is not None
     else:
         print(f"Error fetching information for user {username}: {response.status_code} {response.reason}")
