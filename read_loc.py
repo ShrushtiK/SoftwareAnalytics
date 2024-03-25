@@ -22,13 +22,15 @@ data_pr = json.load(f2)
 repos = []
 
 for item in data_pr:
-    print(f"repo name of pr is {item['full_name']}")
+    #print(f"repo name of pr is {item['full_name']}")
     pull_requests = []
 
     for entry in item['pull_requests']:
         if (entry['created_at'] and entry['merged_at']) is not None:
-            pull_requests.append(time_difference(entry['created_at'], entry['merged_at'],'hours'))
-    if len(pull_requests) > 0:
+            pull_requests.append(time_difference(entry['created_at'], entry['merged_at'],'minutes'))
+    if len(pull_requests) == 0:
+        average_pull_requests = 0
+    elif len(pull_requests) > 0:
         average_pull_requests = sum(pull_requests) / len(pull_requests)
     
     repos.append({
@@ -37,20 +39,11 @@ for item in data_pr:
         "pull_request_average": average_pull_requests
     })
 
-print(len(repos))
-
-pull_requests_final = []
-pull_requests_final.extend(repos['pull_requests'])
-average_pr = []
-average_pr.extend(repos['pull_request_average'])
-with open("timezones2.json", "w") as outfile:
-    json.dump(repos, outfile)
-print("done writing to json")
 
 final_repos = []
 i = 0
 for item in data_tz:
-    print(f"repo name is {item['name']}")
+    #print(f"repo name is {item['name']}")
     locations = []
     for entry in item['users_location']:
         if 'bot' not in entry['login']:
@@ -63,13 +56,17 @@ for item in data_tz:
                 #print("companyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy")
                 locations.append(entry['company'])
 
-    final_repos.append({
-        "repo_name": item['name'],
-        "nr_locations": locations,
-        "pull_requests2": pull_requests_final[i],
-        "pull_request_average": average_pr[i]
-    })
-    i += 1
+    if len(locations) != 0:
+        repo_index = next((i for i, r in enumerate(repos) if r["repo_name"] == item['name']), None)
+        if repo_index is not None:
+            if repos[repo_index]['pull_request_average'] != 0:
+                final_repos.append({
+                    "repo_name": item['name'],
+                    "nr_locations": locations,
+                    "pull_requests": repos[repo_index]['pull_requests'],
+                    "pull_request_average": repos[repo_index]['pull_request_average']
+                })
+        i += 1
 
 with open("timezones.json", "w") as outfile:
     json.dump(final_repos, outfile)
