@@ -13,3 +13,9 @@ For this project, we are looking at the following metrics that can give us some 
 The review of a pull request is the signal that  the code developed by another colaborator can succesfuly be integraded into the existing work. For a pull request to be reviewed, it has to be acknowledged by project maintainers, senior developers, or designated code reviewers. In some cases, a pull request may be reviewed and merged within hours or even minutes, while in other cases, it may take days or weeks for the review process to complete. Generally, however, many teams aim to complete reviews within a few days. The duration is not only impacted by the complexity of the project, but it can also he subjected to other less aknowledged factors, including the geographic distribution of collaborators. Projects with a diverse team spanning multiple time zones may experience slower review speeds due to communication challenges and coordination issues. Those challanges also include language barriers, cultural differences, and differing work schedules.
 
 By analyzing 51 python projects focused on deep learning, xxx pull requests and colaborators from xx countries and xx timezones, we have…..
+
+
+
+About the authors
+
+The four authors are Computer Science Master students at Rijkuniversiteit Groningen. They come from different backgrounds, from 3 different countries and 2 continents, still and are gathered together by the passion for technology and research. At the moment, they are focusing on advancing their understanding and further contributing to the world of software engineering and data science. 
