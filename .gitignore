@@ -3,6 +3,6 @@
 
 # Python
 *.pyc
-*.json
+
 
 *.csv

@@ -1,0 +1,306 @@
+[
+    {
+        "full_name": "intel-analytics/BigDL-2.x",
+        "num_commits": 24564
+    },
+    {
+        "full_name": "autonomio/talos",
+        "num_commits": 700
+    },
+    {
+        "full_name": "jonkrohn/DLTFpT",
+        "num_commits": 196
+    },
+    {
+        "full_name": "keras-team/keras-core",
+        "num_commits": 1394
+    },
+    {
+        "full_name": "microsoft/MMdnn",
+        "num_commits": 1142
+    },
+    {
+        "full_name": "aimat-lab/gcnn_keras",
+        "num_commits": 3092
+    },
+    {
+        "full_name": "bethgelab/foolbox",
+        "num_commits": 1712
+    },
+    {
+        "full_name": "yandexdataschool/Practical_RL",
+        "num_commits": 1567
+    },
+    {
+        "full_name": "AlexanderLutsenko/nobuco",
+        "num_commits": 134
+    },
+    {
+        "full_name": "parrt/tensor-sensor",
+        "num_commits": 236
+    },
+    {
+        "full_name": "intel-analytics/BigDL",
+        "num_commits": 24570
+    },
+    {
+        "full_name": "arogozhnikov/einops",
+        "num_commits": 708
+    },
+    {
+        "full_name": "advboxes/AdvBox",
+        "num_commits": 386
+    },
+    {
+        "full_name": "kymatio/kymatio",
+        "num_commits": 991
+    },
+    {
+        "full_name": "csc-training/intro-to-dl",
+        "num_commits": 718
+    },
+    {
+        "full_name": "xarray-contrib/xbatcher",
+        "num_commits": 208
+    },
+    {
+        "full_name": "jarvisqi/deep_learning",
+        "num_commits": 102
+    },
+    {
+        "full_name": "CSCfi/machine-learning-scripts",
+        "num_commits": 771
+    },
+    {
+        "full_name": "charliedream1/ai_quant_trade",
+        "num_commits": 327
+    },
+    {
+        "full_name": "AxisCommunications/onnx-to-keras",
+        "num_commits": 155
+    },
+    {
+        "full_name": "ofnote/tsalib",
+        "num_commits": 101
+    },
+    {
+        "full_name": "radiodee1/awesome-chatbot",
+        "num_commits": 3328
+    },
+    {
+        "full_name": "klarh/geometric_algebra_attention",
+        "num_commits": 115
+    },
+    {
+        "full_name": "suragnair/alpha-zero-general",
+        "num_commits": 223
+    },
+    {
+        "full_name": "ufoym/deepo",
+        "num_commits": 158
+    },
+    {
+        "full_name": "wandb/wandb",
+        "num_commits": 14455
+    },
+    {
+        "full_name": "labmlai/labml",
+        "num_commits": 1881
+    },
+    {
+        "full_name": "osmr/imgclsmob",
+        "num_commits": 2476
+    },
+    {
+        "full_name": "NeuromorphicProcessorProject/snn_toolbox",
+        "num_commits": 659
+    },
+    {
+        "full_name": "operatorai/modelstore",
+        "num_commits": 285
+    },
+    {
+        "full_name": "RubensZimbres/Repo-2022",
+        "num_commits": 438
+    },
+    {
+        "full_name": "PINTO0309/PINTO_model_zoo",
+        "num_commits": 3209
+    },
+    {
+        "full_name": "EliorBenYosef/reinforcement-learning",
+        "num_commits": 143
+    },
+    {
+        "full_name": "PINTO0309/Keras-OneClassAnomalyDetection",
+        "num_commits": 204
+    },
+    {
+        "full_name": "neuralmagic/sparseml",
+        "num_commits": 4150
+    },
+    {
+        "full_name": "gmalivenko/pytorch2keras",
+        "num_commits": 282
+    },
+    {
+        "full_name": "hamelsmu/code_search",
+        "num_commits": 188
+    },
+    {
+        "full_name": "DavidLandup0/deepvision",
+        "num_commits": 164
+    },
+    {
+        "full_name": "neuralmagic/sparsify",
+        "num_commits": 567
+    },
+    {
+        "full_name": "deephyper/deephyper",
+        "num_commits": 2790
+    },
+    {
+        "full_name": "mead-ml/mead-baseline",
+        "num_commits": 2265
+    },
+    {
+        "full_name": "PINTO0309/openvino2tensorflow",
+        "num_commits": 745
+    },
+    {
+        "full_name": "DagsHub/client",
+        "num_commits": 1870
+    },
+    {
+        "full_name": "AdityaSoni19031997/Machine-Learning",
+        "num_commits": 241
+    },
+    {
+        "full_name": "ayyucedemirbas/machine_learning_algorithms",
+        "num_commits": 243
+    },
+    {
+        "full_name": "neptune-ai/neptune-client",
+        "num_commits": 2156
+    },
+    {
+        "full_name": "deel-ai/deel-torchlip",
+        "num_commits": 266
+    },
+    {
+        "full_name": "dataignitelab/iot_ai_model",
+        "num_commits": 184
+    },
+    {
+        "full_name": "polyaxon/polyaxon-examples",
+        "num_commits": 136
+    },
+    {
+        "full_name": "neptune-ai/examples",
+        "num_commits": 720
+    },
+    {
+        "full_name": "ari-dasci/S-TSFE-DL",
+        "num_commits": 141
+    },
+    {
+        "full_name": "georgymh/decentralized-ml",
+        "num_commits": 299
+    },
+    {
+        "full_name": "JustinZeyeum/DLTFpT",
+        "num_commits": 160
+    },
+    {
+        "full_name": "layerai-archive/sdk",
+        "num_commits": 502
+    },
+    {
+        "full_name": "ZohebAbai/Deep-Learning-Projects",
+        "num_commits": 146
+    },
+    {
+        "full_name": "rahulbakshee/cv",
+        "num_commits": 140
+    },
+    {
+        "full_name": "intel-analytics/analytics-zoo",
+        "num_commits": 20834
+    },
+    {
+        "full_name": "rtlee9/serveit",
+        "num_commits": 130
+    },
+    {
+        "full_name": "rizavelioglu/challenge-aido_RL-IL",
+        "num_commits": 190
+    },
+    {
+        "full_name": "Toyota-Connected-India/zokyo",
+        "num_commits": 202
+    },
+    {
+        "full_name": "hypnosapos/cartpole-rl-remote",
+        "num_commits": 331
+    },
+    {
+        "full_name": "JennEYoon/deep-learning",
+        "num_commits": 865
+    },
+    {
+        "full_name": "Storiesbyharshit/Data-Science-Portfolio",
+        "num_commits": 215
+    },
+    {
+        "full_name": "Suraj520/data-science",
+        "num_commits": 395
+    },
+    {
+        "full_name": "mboukabous/Security-Intelligence-on-Exchanged-Multimedia-Messages-Based-on-Deep-Learning",
+        "num_commits": 109
+    },
+    {
+        "full_name": "penguinmenac3/babilim",
+        "num_commits": 143
+    },
+    {
+        "full_name": "NewronAI/newron-sdk",
+        "num_commits": 229
+    },
+    {
+        "full_name": "chansoopark98/Tensorflow-Keras-Semantic-Segmentation",
+        "num_commits": 227
+    },
+    {
+        "full_name": "ilex-paraguariensis/yerbamate",
+        "num_commits": 573
+    },
+    {
+        "full_name": "MarioRasconMerinoML/Machine_Learning",
+        "num_commits": 138
+    },
+    {
+        "full_name": "Amin-Sz/Deep-Reinforcement-Learning",
+        "num_commits": 239
+    },
+    {
+        "full_name": "AhmedHani/nlpeus",
+        "num_commits": 145
+    },
+    {
+        "full_name": "altaris/turbo-broccoli",
+        "num_commits": 174
+    },
+    {
+        "full_name": "metriccoders/metriccoders_notebooks",
+        "num_commits": 103
+    },
+    {
+        "full_name": "AutoNN/AutoNN",
+        "num_commits": 274
+    },
+    {
+        "full_name": "sdivyanshu90/MindfulML",
+        "num_commits": 226
+    }
+]
