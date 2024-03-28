@@ -1,0 +1,9 @@
+pandas
+numpy
+matplotlib
+spacy
+timezonefinder
+pytz
+scipy
+statsmodels
+pendulum
