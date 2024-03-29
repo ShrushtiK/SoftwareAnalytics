@@ -1,39 +1,47 @@
 
 ## Project Description
-For the subject of Software Analytics, we have been tasked with developing a project that analyzised metrics involving global collaboration in software products.
+The influence of international collaboration on code review speed in non-industry repositories outside the industrial sector is a subject that warrants detailed examination. This project aims to shed light on how global cooperation affects code review efficiency in these specialized repositories. <br/>
 
-Authors: Andra Trandafir, Elena Georgiou, Eduard Sabo, Shrushti . 
+Authors: Andra Trandafir, Elena Georgiou, Eduard Sabo, Shrushti Kaul. <br/>
 
-## Hypothesis
-***Do projects that involve big global collaboration have a lower review speed?***
+Blog Post: [Medium Article](https://medium.com/@software.analytics.group7/global-collaboration-and-review-velocity-5201fdafd46d)
 
-## Intuition
-The hypothesis we have come up with suggests that project that involve international collaboration may be subjected to slower review speeds due to various communication issues: language barriers, different timezones, cultural differences, technology and infrastructure differences, communication channels and tools, work-life balance and burnout regulations etc. 
+## Overview
+While existing research on code review speed predominantly analyzes highly active and popular code bases, our investigation targets Deep Learning repositories specifically. This choice is motivated by the desire to understand the unique dynamics of Deep Learning projects and the effect of international collaboration on code review speed within this domain. Our objective is to uncover insights into the collaborative patterns in non-industry Deep Learning projects across different geographical regions and assess their impact on the code review process. Such insights can promote cross-border collaboration, enhance the global Deep Learning community, and lead to improved code review methodologies that boost productivity and innovation.
+
+## Research Questions
+### Research Question 1 (RQ1): 
+What is the impact of the number of different time zones from where developers collaborate on the speed of code review?
+
+### Research Question 2 (RQ2): 
+How does the variation in time zones from where developers collaborate influence the speed of code review? <br/> <br/>
+
+The key metric for assessing code review speed is the “time-to-merge,” defined as the duration from the opening of a pull request by its author to its eventual merge (and closure).<br/>
+The metric we use to quantify global collaboration is based on the count of distinct time zones and the difference in hours between them. <br/>
+The analysis for each research question will be conducted through two approaches:
+- Repository-Level Analysis: Calculate an aggregated “time-to-merge” metric for all pull requests within a given repository. This figure is then analyzed in relation to the diverse time zones from which the repository’s collaborators operate.
+- Pull Request-Level Analysis: Determine the “time-to-merge” for each individual pull request, and examine this in correlation with the time zones of the participating contributors.
 
 ## Data Extraction
-### Repositories Criteria
-We have choosen projects that include at least one of the libraries **tensorflow, pytorch or keras** in their descriptions, README file, or codebase. The reason behind the 3 libraries is that they are the most popular libraries used in deep learning. 
-### Commit Count
-We are filtering repositories based on their commit count falling withing the range of **1000 to 100,000** commits. We are looking for active communities with many contributions. We want to avoid small projects or excessibely large projects that will take a lot of time to analyze.
-### Open-source
-We are prioritizing open-source projects that have been developed by the community, because this will rise the availability and diversity of projects, transparency and knowledge-sharing.
-### Timezone identification
-At least 50% of the authors have sth that reveals their timezone (see 3-4 different ways below). Why 50%? We need to find the difference between contributors and collaborators!! WitHub identifies contributors by author email address. This endpoint groups contribution counts by GitHub user, which includes all associated email addresses. To improve performance, only the first 500 author email addresses in the repository link to GitHub users. The rest will appear as anonymous contributors without associated GitHub user information.
+Our data extraction pipeline is explained step-by-step under 
+```
+data_collection.ipynb
+```
 
+## Analysis and Results of our research questions
+Please find our exploration and findings on the two research questions in the files
+```
+RQ1_analysis.ipynb
+```
+and
+```
+RQ2_analysis.ipynb
+```
+respectively
 
-## Metrics and Thresholds
-1. Timezone Identification
-Derived from the organisation that some users might have on their profile (e.g. Microsoft UK)
-Time of commit
-Country & Bio fields?
-
-2. "Big" Global Collaboration
-How do we define 'big' global collaboration? We can get the data and analyse their distribution and then decide (Emeralda)
-How do we define big 'global' collaboration? We need to set a threshold regarding how many different time zones we consider global and non-global. Or percentage of different values? How much difference is considered significant (i.e., is 1 our difference significant?)
-   
-3. Review Speed Definition
- How do we define review speed? Is it time-to-merge? Is it time-to-accept?
-![309892999-3ddc89bc-3ade-4ef3-b41e-202ed91af2c2](https://github.com/ShrushtiK/SoftwareAnalytics/assets/64592227/2b4ec453-0c9a-4c08-832e-d508bc0b363f)
-
-
-## Results
+## Dependencies
+Before running the notebooks please ensure the following commands are run
+```
+pip install -r requirements.txt
+python -m spacy download en_core_web_sm
+```
