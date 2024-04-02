@@ -17,7 +17,12 @@ What is the impact of the number of different time zones from where developers c
 How does the variation in time zones from where developers collaborate influence the speed of code review? <br/> <br/>
 
 The key metric for assessing code review speed is the “time-to-merge,” defined as the duration from the opening of a pull request by its author to its eventual merge (and closure).<br/>
-The metric we use to quantify global collaboration is based on the count of distinct time zones and the difference in hours between them. <br/>
+Multiple metrics were used to quantify global collaboration:
+- count of distinct time zones (RQ1)
+- Simpson's Diversity index, which is a measure of diversity which takes into account the number of timeones present, as well as the relative frequence of each timezone (RQ1)
+- average pairwise difference in hours between the timezones (RQ2)
+ <br/>
+
 The analysis for each research question will be conducted through two approaches:
 - Repository-Level Analysis: Calculate an aggregated “time-to-merge” metric for all pull requests within a given repository. This figure is then analyzed in relation to the diverse time zones from which the repository’s collaborators operate.
 - Pull Request-Level Analysis: Determine the “time-to-merge” for each individual pull request, and examine this in correlation with the time zones of the participating contributors.
@@ -27,9 +32,10 @@ Our data extraction pipeline is explained step-by-step under
 ```
 data_collection.ipynb
 ```
+All the relevant data is in the 'data' directory.
 
-## Analysis and Results of our research questions
-Please find our exploration and findings on the two research questions in the files
+## Analysis of our research questions
+Please find our exploration on the two research questions in the files
 ```
 RQ1_analysis.ipynb
 ```
@@ -37,7 +43,25 @@ and
 ```
 RQ2_analysis.ipynb
 ```
-respectively
+respectively.
+
+All the relevant data is in the 'data_rqs' directory.
+
+## Main findings
+### RQ1: What is the impact of the number of different time zones from where developers collaborate on the speed of code review?
+Our findings are: 
+Repository-Level:
+- No significant difference has been found in time-to-merge between repositories with low number of distinct timezones and high number of distinct timezones. 
+- With respect to distribution of collaborators' timezones, repositories with a more homogenous spread of timezones exhibit faster time-to-merge values when compared to repositories where the distribution/frequency of timezones is skewed.
+Pull Request-Level:
+- The lower the number of timezones in a Pull Request, the faster the code review speed.
+
+### RQ2: How does the variation in time zones from where developers collaborate influence the speed of code review? 
+Our findings are: 
+Repository-Level:
+- Repositories with lower average timezone difference have lower time-to-merge than repositories with higher average timezone difference.
+Pull Request-Level:
+- Based of of our filtered data, around half of the pull requests had participants from the same timezone. We found that PRs with participants from the same timezone display a faster time-to-merge metric than participants with timezone difference greater than 0.
 
 ## Dependencies
 Before running the notebooks please ensure the following commands are run
